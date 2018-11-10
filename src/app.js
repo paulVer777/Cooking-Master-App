@@ -10,13 +10,15 @@ import { addRecipe, removeRecipe ,editRecipe} from './actions/expenseActions';
 
 const store = getStore()
 
-store.dispatch(addRecipe({title:'Lasagne',preparationTime:45}))
-store.dispatch(addRecipe({title:'Lasagne',preparationTime:45}))
-const ret = store.dispatch(addRecipe({title:'Lasagne',preparationTime:45}))
+store.dispatch(addRecipe({title:'Lasagne',preparationTime:45, difficulty: 'medium'}))
+store.dispatch(addRecipe({title:'Risotto',preparationTime:45, difficulty: 'easy'}))
+const ret = store.dispatch(addRecipe({title:'Lasagne',preparationTime:45,difficulty:'medium'}))
 store.dispatch(editRecipe(ret.recipe.id,{title:'Pizza'}))
-
+store.dispatch(setDif)
 
 console.log(store.getState())
+
+
 
 const jsx = (
  <Provider store = {store} >

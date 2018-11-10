@@ -1,13 +1,25 @@
 import uuidv4 from 'uuid'
 
 
-const addRecipe = ({title = 'unknown', preparationTime = 'unknown'} = {title: 'kos', preparationTime:'333'}) => (
+const addRecipe = (
+    {
+        title = 'unknown',
+        preparationTime = 'unknown',
+        ingredients = [],
+        difficulty = 'unknown',
+        createdAt = undefined
+    
+    
+    } = {}) => (
     {
         type:'ADD_RECIPE',
         recipe:{
             id:uuidv4(),
             title,
-            preparationTime
+            preparationTime,
+            ingredients,
+            difficulty,
+            createdAt
         }   
     }
 )
