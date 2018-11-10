@@ -1,14 +1,14 @@
 
 const filtrator = (arr,filters) => {
 
-arr.map((value,index) => {
+return arr.filter((value,index) => {
 
     const difficulty = !filters.difficulty || value.difficulty === filters.difficulty
     const text = value.title.toLowerCase().includes(filters.text.toLowerCase())    
-
+    
     return difficulty && text
 
 })
 }
 
-export {filtrator}
+export default filtrator

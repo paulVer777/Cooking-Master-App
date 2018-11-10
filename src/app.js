@@ -6,6 +6,7 @@ import AppRouter from './routes/AppRouter'
 import getStore from './store/store'
 import {Provider} from 'react-redux'
 import { addRecipe, removeRecipe ,editRecipe} from './actions/expenseActions';
+import { setDifficulty } from './actions/filtersActions';
 
 
 const store = getStore()
@@ -14,7 +15,7 @@ store.dispatch(addRecipe({title:'Lasagne',preparationTime:45, difficulty: 'mediu
 store.dispatch(addRecipe({title:'Risotto',preparationTime:45, difficulty: 'easy'}))
 const ret = store.dispatch(addRecipe({title:'Lasagne',preparationTime:45,difficulty:'medium'}))
 store.dispatch(editRecipe(ret.recipe.id,{title:'Pizza'}))
-store.dispatch(setDif)
+store.dispatch(setDifficulty('easy'))
 
 console.log(store.getState())
 

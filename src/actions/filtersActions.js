@@ -12,3 +12,5 @@ const setDifficulty = (difficulty) => (
         difficulty
     }
 )
+
+export {setText, setDifficulty}

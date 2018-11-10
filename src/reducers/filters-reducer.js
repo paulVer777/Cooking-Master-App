@@ -21,3 +21,5 @@ const filtersReducer = (state = filters,action) => {
             return state    
     }
 }
+
+export default filtersReducer
