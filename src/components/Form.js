@@ -24,14 +24,14 @@ render(){
     return (
         <div>
             <form>
-                <input type = 'text' placeholder = 'title' onChange = {this.onInputHandler} name = 'title'/>
+                <input type = 'text' placeholder = 'title' onChange = {this.onInputHandler} autoFocus name = 'title'/>
                 <input type = 'number' placeholder = 'preparation time' onChange = {this.onInputHandler} name = 'amount' />
                 <select onChange = {this.onInputHandler} name = 'difficulty'>
                 <option value = 'easy'>Easy</option>
                 <option value = 'Medium'>Medium</option>
                 <option value = 'Hard'>Hard</option>
                 </select>
-
+                <button>Add</button>
             </form>
         </div>
     )
