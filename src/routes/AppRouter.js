@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import RecipeList from '../components/RecipeList'
 import About from '../components/About'
 import ErrorPage from '../components/ErrorPage'
-
+import Form from '../components/Form'
 
 const AppRouter = () => (
     
@@ -14,6 +14,7 @@ const AppRouter = () => (
      <Switch>
      <Route path = '/' component = {RecipeList} exact = {true} />
      <Route path = '/about' component = {About} />
+     <Route path = '/form' component = {Form} />
      <Route component = {ErrorPage} />
      <Route />
      </Switch>
