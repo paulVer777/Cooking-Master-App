@@ -7,7 +7,8 @@ const addRecipe = (
         preparationTime = 'unknown',
         ingredients = [],
         difficulty = 'unknown',
-        createdAt = undefined
+        createdAt = undefined,
+        instructions = 'unknown'
     
     
     } = {}) => (
@@ -19,7 +20,8 @@ const addRecipe = (
             preparationTime,
             ingredients,
             difficulty,
-            createdAt
+            createdAt,
+            instructions
         }   
     }
 )

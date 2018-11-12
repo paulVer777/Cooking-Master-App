@@ -5,6 +5,7 @@ import RecipeList from '../components/RecipeList'
 import About from '../components/About'
 import ErrorPage from '../components/ErrorPage'
 import Form from '../components/Form'
+import RecipeCreator from '../components/RecipeCreator';
 
 const AppRouter = () => (
     
@@ -15,6 +16,7 @@ const AppRouter = () => (
      <Route path = '/' component = {RecipeList} exact = {true} />
      <Route path = '/about' component = {About} />
      <Route path = '/form' component = {Form} />
+     <Route path = '/creator' component = {RecipeCreator} />
      <Route component = {ErrorPage} />
      <Route />
      </Switch>
