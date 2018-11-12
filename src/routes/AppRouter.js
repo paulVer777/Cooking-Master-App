@@ -6,6 +6,7 @@ import About from '../components/About'
 import ErrorPage from '../components/ErrorPage'
 import Form from '../components/Form'
 import RecipeCreator from '../components/RecipeCreator';
+import RecipeEditor from '../components/RecipeEditor'
 
 const AppRouter = () => (
     
@@ -17,6 +18,7 @@ const AppRouter = () => (
      <Route path = '/about' component = {About} />
      <Route path = '/form' component = {Form} />
      <Route path = '/creator' component = {RecipeCreator} />
+     <Route path = '/editor/:id' component = {RecipeEditor} />
      <Route component = {ErrorPage} />
      <Route />
      </Switch>
