@@ -1,8 +1,7 @@
 import React from 'react'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Header from '../components/Header'
-import RecipeList from '../components/RecipeList'
-import About from '../components/About'
+import Dashboard from '../components/Dasboard'
 import ErrorPage from '../components/ErrorPage'
 import Form from '../components/Form'
 import RecipeCreator from '../components/RecipeCreator';
@@ -14,8 +13,7 @@ const AppRouter = () => (
      <div>
      <Header/>
      <Switch>
-     <Route path = '/' component = {RecipeList} exact = {true} />
-     <Route path = '/about' component = {About} />
+     <Route path = '/' component = {Dashboard} exact = {true} />
      <Route path = '/form' component = {Form} />
      <Route path = '/creator' component = {RecipeCreator} />
      <Route path = '/editor/:id' component = {RecipeEditor} />
