@@ -19,11 +19,9 @@ onSearchTextHandler = (event) => {
     
 }
 onDifficultyLevelHandler = (event) => {
-    console.log(event.target.value)
     const data = event.target.value
     this.props.dispatch(setDifficulty(data))
 }
-
 
     render(){
         return(

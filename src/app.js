@@ -20,8 +20,6 @@ store.dispatch(editRecipe(ret.recipe.id,{title:'Pizza'}))
 
 console.log(store.getState())
 
-
-
 const jsx = (
  <Provider store = {store} >
  <AppRouter/>

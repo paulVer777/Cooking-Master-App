@@ -7,10 +7,8 @@ const RecipeCreator = (props) => (
     <div>
     <h1>Recipe Creator</h1>
     <Form submitter = {(dataFromForm) => {
-
     props.dispatch(addRecipe(dataFromForm))
-    props.history.push('/about')    
-
+    props.history.push('/')    
     }}/>
     </div>
 )
