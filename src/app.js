@@ -13,6 +13,7 @@ const store = getStore()
 
 store.dispatch(addRecipe({title:'Lasagne',preparationTime:45, difficulty: 'medium'}))
 store.dispatch(addRecipe({title:'Risotto',preparationTime:45, difficulty: 'easy'}))
+store.dispatch(addRecipe({title:'Risotto',preparationTime:45, difficulty: 'hard'}))
 const ret = store.dispatch(addRecipe({title:'Lasagne',preparationTime:45,difficulty:'medium'}))
 store.dispatch(editRecipe(ret.recipe.id,{title:'Pizza'}))
 

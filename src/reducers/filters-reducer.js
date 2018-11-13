@@ -1,6 +1,6 @@
 
 const filters = {
-    difficulty : undefined,
+    difficulty : 'all',
     text : '',
 }
 
