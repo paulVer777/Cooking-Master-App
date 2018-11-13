@@ -3,10 +3,11 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import filtrator from '../selectors/filtrator'
 import RecipeListItem from '../components/RecipeListItem'
+import { removeRecipe } from '../actions/expenseActions';
 
 const RecipeList = (props) => (
     <div className = 'recipe-list' >
-    {props.recipes.map((value ,index) => <RecipeListItem recipeData = {value} key = {value.id} />)}
+    {props.recipes.map((value ,index) => <RecipeListItem recipeData = {value} key = {value.id} remove = { () => props.dispatch(removeRecipe(value.id))}/>)}
     </div>
 )
 

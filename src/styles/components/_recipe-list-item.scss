@@ -1,0 +1,16 @@
+
+.recipe-list-item{
+
+    padding: 1rem;
+    border:2px solid olivedrab;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-list-item:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.recipe-list-item__text{
+   
+}
