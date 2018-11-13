@@ -1,11 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Form from '../components/Form'
+import { editRecipe } from '../actions/expenseActions';
 
-const RecipeCreator = (props) => (
+
+const RecipeEditor = (props) => (
     <div>
         <h1>Edit</h1>
-        <Form recipe = {props.recipe}/>
+        <Form 
+        recipe = {props.recipe}
+        submitter = {(obj) => props.dispatch(editRecipe(props.recipe.id,obj))}
+        />    
     </div>
 )
 
@@ -15,4 +20,4 @@ const mapStateToProps = (state,props) => (
     }
 )
 
-export default connect(mapStateToProps)(RecipeCreator)
+export default connect(mapStateToProps)(RecipeEditor)

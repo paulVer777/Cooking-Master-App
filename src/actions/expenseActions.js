@@ -9,8 +9,6 @@ const addRecipe = (
         difficulty = 'unknown',
         createdAt = undefined,
         instructions = 'unknown'
-    
-    
     } = {}) => (
     {
         type:'ADD_RECIPE',
