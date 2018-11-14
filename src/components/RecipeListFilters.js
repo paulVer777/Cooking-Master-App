@@ -26,7 +26,7 @@ onDifficultyLevelHandler = (event) => {
     render(){
         return(
             <div className = 'recipe-list-filters'>
-                <input type = 'text' placeholder = 'search' onChange = {this.onSearchTextHandler} name = 'text'/>
+                <input type = 'text' placeholder = 'search' autoFocus onChange = {this.onSearchTextHandler} name = 'text'/>
                 <select onChange = {this.onDifficultyLevelHandler}>
                     <option value = 'all'>All</option>
                     <option value = 'easy' >Easy</option>

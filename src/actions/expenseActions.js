@@ -8,12 +8,13 @@ const addRecipe = (
         ingredients = [],
         difficulty = 'unknown',
         createdAt = undefined,
-        instructions = 'unknown'
+        instructions = 'unknown',
+        id
     } = {}) => (
     {
         type:'ADD_RECIPE',
         recipe:{
-            id:uuidv4(),
+            id,
             title,
             preparationTime,
             ingredients,
@@ -38,6 +39,7 @@ const editRecipe = (id,obj) => (
         obj
     }
 )
+
 
 
 

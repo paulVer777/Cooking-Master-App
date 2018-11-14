@@ -9,7 +9,9 @@ const RecipeCreator = (props) => (
     <Form submitter = {(dataFromForm) => {
     props.dispatch(addRecipe(dataFromForm))
     props.history.push('/')    
-    }}/>
+    }}
+    recipeId = {props.match.params.id}
+    />
     </div>
 )
 

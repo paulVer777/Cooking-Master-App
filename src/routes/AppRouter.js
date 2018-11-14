@@ -15,7 +15,7 @@ const AppRouter = () => (
      <Switch>
      <Route path = '/' component = {Dashboard} exact = {true} />
      <Route path = '/form' component = {Form} />
-     <Route path = '/creator' component = {RecipeCreator} />
+     <Route path = '/creator/:id' component = {RecipeCreator} />
      <Route path = '/editor/:id' component = {RecipeEditor} />
      <Route component = {ErrorPage} />
      <Route />

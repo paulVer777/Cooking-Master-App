@@ -3,7 +3,6 @@ import moment from 'moment'
 
 export default class Form extends React.Component {
 
-
 constructor(props){
     super(props)
     this.state = {
@@ -12,7 +11,8 @@ constructor(props){
         instructions:props.recipe ? props.recipe.instructions : '',
         difficulty: props.recipe ? props.recipe.difficulty : 'easy',
         createdAt:props.recipe ? props.recipe.createdAt : moment(),
-        ingredients: props.recipe ? props.recipe.ingredients : []
+        ingredients: props.recipe ? props.recipe.ingredients : [],
+        id:this.props.recipeId || this.props.recipe.id
     }
 }
 
@@ -31,12 +31,17 @@ onSubmitHandler = (event) => {
         instructions:this.state.instructions,
         difficulty: this.state.difficulty,
         createdAt:this.state.createdAt,
-        ingredients: this.state.ingredients
+        ingredients: this.state.ingredients,
+        id:this.state.id
     })
 }
 
-render(){
+onIngredientHandler = (ingredient) => {
+    this.setState((prevState) => ({ingredients:[...prevState.ingredients,ingredient]}))
+}
 
+render(){
+                
     return (
         <div>
             <form onSubmit = {this.onSubmitHandler}>
