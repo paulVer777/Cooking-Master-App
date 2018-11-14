@@ -15,26 +15,12 @@ store.dispatch(addRecipe({title:'Lasagne',preparationTime:45, difficulty: 'mediu
 store.dispatch(addRecipe({title:'Pizaa',preparationTime:45, difficulty: 'medium',id:'qwerty2'}))
 
 
-const addIngredient = (id,ingredient) => (
-    {
-        type:'ADD_INGREDIENT',
-        id,
-        ingredient
-    }
-)
-
-const removeIngredient = (recipeId, ingredientId) => (
-    {
-        type:'REMOVE_INGREDIENT',
-        recipeId,
-        ingredientId
-    }
-)
 
 
-store.dispatch(addIngredient('qwerty',{id:'qwertyzxx',title:'cheese'}))
-store.dispatch(addIngredient('qwerty',{id:'qwertyzxczxc',title:'butter'}))
-store.dispatch(removeIngredient('qwerty', 'qwertyzxx'))
+
+// store.dispatch(addIngredient('qwerty',{id:'qwertyzxx',title:'cheese'}))
+// store.dispatch(addIngredient('qwerty',{id:'qwertyzxczxc',title:'butter'}))
+// store.dispatch(removeIngredient('qwerty', 'qwertyzxx'))
 
 console.log(store.getState())
 

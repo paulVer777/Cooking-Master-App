@@ -43,7 +43,7 @@ onIngredientHandler = (ingredient) => {
 render(){
                 
     return (
-        <div>
+        <div className = 'form'>
             <form onSubmit = {this.onSubmitHandler}>
                 <input type = 'text' placeholder = 'title' onChange = {this.onInputHandler} autoFocus name = 'title' value = {this.state.title}/>
                 <input type = 'text' placeholder = 'preparation time' onChange = {this.onInputHandler} name = 'preparationTime' value = {this.state.preparationTime} />

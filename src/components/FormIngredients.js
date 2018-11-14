@@ -1,7 +1,36 @@
 import React from 'react'
+import uuidv4 from 'uuid'
 
-const FormIngredients = (props) => (
-    <div>Form</div>
-)
-   
+class FormIngredients extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            text:''
+        }
+    }
+
+    onInputHandler = (event) => {
+        const data = event.target.value
+        this.setState((prevState) => ({text:data}))
+    }
+
+    onSubmitHandler = (event) => {
+        event.preventDefault()
+        this.props.submitterIngredients({title:this.state.text,id:uuidv4})
+    }
+
+
+    render(){
+        return (
+            <div className = 'form-ingredients'>
+                <form onSubmit = {this.onSubmitHandler} >
+                <input type = 'text' onChange = {this.onInputHandler} />
+                <button>Add Ingredient</button>
+                </form>
+            </div>
+        )
+    }
+}
+
+
 export default FormIngredients

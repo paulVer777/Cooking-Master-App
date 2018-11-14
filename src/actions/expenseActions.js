@@ -40,7 +40,21 @@ const editRecipe = (id,obj) => (
     }
 )
 
+const addIngredient = (id,ingredient) => (
+    {
+        type:'ADD_INGREDIENT',
+        id,
+        ingredient
+    }
+)
+
+const removeIngredient = (recipeId, ingredientId) => (
+    {
+        type:'REMOVE_INGREDIENT',
+        recipeId,
+        ingredientId
+    }
+)
 
 
-
-export {addRecipe,removeRecipe, editRecipe}
+export {addRecipe,removeRecipe, editRecipe, addIngredient }
