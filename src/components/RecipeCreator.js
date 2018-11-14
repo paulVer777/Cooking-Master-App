@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Form from '../components/Form'
 import FormIngredients from '../components/FormIngredients'
 import  {addRecipe, addIngredient} from '../actions/expenseActions'
+import IngredientsList from '../components/IngredientsList'
 
 const RecipeCreator = (props) => (
     <div className = 'recipe-creator'>
@@ -17,6 +18,7 @@ const RecipeCreator = (props) => (
     recipeId = {props.match.params.id}
     
     />
+    <IngredientsList recipeId = {props.match.params.id} />
     <FormIngredients
     submitterIngredients = {(dataFromForm) => props.dispatch(addIngredient(props.match.params.id,dataFromForm))}
     />
