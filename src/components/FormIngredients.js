@@ -16,15 +16,15 @@ class FormIngredients extends React.Component {
 
     onSubmitHandler = (event) => {
         event.preventDefault()
-        this.props.submitterIngredients({title:this.state.text,id:uuidv4})
+        this.props.submitterIngredients({title:this.state.text,id:uuidv4()})
+        event.target.elements.title.value = ''
     }
-
 
     render(){
         return (
             <div className = 'form-ingredients'>
                 <form onSubmit = {this.onSubmitHandler} >
-                <input type = 'text' onChange = {this.onInputHandler} />
+                <input type = 'text' onChange = {this.onInputHandler} name = 'title' />
                 <button>Add Ingredient</button>
                 </form>
             </div>

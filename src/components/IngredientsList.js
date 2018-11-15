@@ -1,15 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import IngredientsListItem from '../components/IngredientsListItem'
 
 const IngredientList = (props) => (
     <div className = 'ingredients-list' >
         <h3>Ingredients List</h3>
     {
-       !props.recipe || props.recipe.ingredients.map((value,index) => <p>{value.title}</p>)
+       !props.recipe || props.recipe.ingredients.map((value,index) => <IngredientsListItem ingredient = {value} key = {value.id} />)
     }
     </div>
 )
-
 
 const mapStateToProps = (state,props) => {
       
