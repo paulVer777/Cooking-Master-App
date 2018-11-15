@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import IngredientsListItem from '../components/IngredientsListItem'
+import {removeIngredient} from '../actions/expenseActions'
 
 const IngredientList = (props) => (
     <div className = 'ingredients-list' >
-        <h3>Ingredients List</h3>
+        <h3> {!props.recipe ? 'Please fill fields above before start adding ingredients' : props.recipe.title } </h3>
     {
-       !props.recipe || props.recipe.ingredients.map((value,index) => <IngredientsListItem ingredient = {value} key = {value.id} />)
+       !props.recipe || props.recipe.ingredients.map((value,index) => <IngredientsListItem ingredient = {value} key = {value.id} remove = {()=> props.dispatch(removeIngredient(props.recipeId,value.id))} />)
     }
     </div>
 )

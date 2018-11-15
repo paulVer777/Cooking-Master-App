@@ -57,4 +57,4 @@ const removeIngredient = (recipeId, ingredientId) => (
 )
 
 
-export {addRecipe,removeRecipe, editRecipe, addIngredient }
+export {addRecipe,removeRecipe, editRecipe, addIngredient, removeIngredient }

@@ -21,6 +21,7 @@ const RecipeCreator = (props) => (
     <IngredientsList recipeId = {props.match.params.id} />
     <FormIngredients
     submitterIngredients = {(dataFromForm) => props.dispatch(addIngredient(props.match.params.id,dataFromForm))}
+    recipeId = {props.match.params.id}
     />
     </div>
 )
